@@ -1,11 +1,7 @@
 ---
-title: "Welcome to My Site"
+title: "montty.dev"
 date: 2025-01-31
 draft: false
 ---
 
-# Welcome to My Site
-
-This is my personal website where I share my thoughts, projects, and experiences.
-
-## Recent Posts
+My corner of the internet where I write about tech, share what I've learned, and document my journey.
