@@ -26,6 +26,9 @@
             </a>
             {{- end }}
         </div>
+        {{- if site.Params.socialIcons }}
+        {{ partial "social_icons.html" (dict "align" "center") }}
+        {{- end }}
     </div>
 </div>
 {{- end }}

@@ -1,15 +1,15 @@
 class VimNavigation {
     constructor() {
-        this.mode = 'normal';
-        this.commandBuffer = '';
+        this.currentLinkIndex = -1;
         this.links = [];
         this.paragraphs = [];
-        this.currentLinkIndex = -1;
         this.currentParagraphIndex = -1;
-        this.modeIndicator = null;
-        this.titleCursor = null;
-        this.isInPostContent = false;
-        this.isHomePage = document.querySelector('.profile') !== null;
+        this.searchMode = false;
+        this.searchQuery = '';
+        this.searchResults = [];
+        this.searchResultIndex = -1;
+        this.mode = 'normal';
+
         this.init();
     }
 
@@ -52,7 +52,6 @@ class VimNavigation {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: var(--theme);
             color: var(--primary);
             padding: 5px 10px;
             border-radius: 4px;
@@ -60,12 +59,8 @@ class VimNavigation {
             z-index: 1000;
             border: 1px solid var(--border);
         `;
-        this.updateModeIndicator();
+        this.modeIndicator.textContent = '-- NORMAL --';
         document.body.appendChild(this.modeIndicator);
-    }
-
-    updateModeIndicator() {
-        this.modeIndicator.textContent = `-- ${this.mode.toUpperCase()} --`;
     }
 
     updateLinksList() {
@@ -103,19 +98,19 @@ class VimNavigation {
         if (postContent) {
             // Get all elements in visual order
             const elements = [];
-            
+
             // Get block elements first
             elements.push(...Array.from(postContent.querySelectorAll('p, h1, h2, h3, h4, h5, h6, blockquote, pre')));
-            
+
             // Get list items, excluding nested ones
             const listItems = Array.from(postContent.querySelectorAll('li')).filter(li => {
                 const parentList = li.parentElement;
                 const grandparent = parentList.parentElement;
                 return !grandparent || !grandparent.closest('li');
             });
-            
+
             elements.push(...listItems);
-            
+
             // Filter out empty elements
             this.paragraphs = elements.filter(el => {
                 const text = el.textContent.trim();
@@ -341,13 +336,6 @@ class VimNavigation {
             case 'G': // Go to bottom
                 this.currentLinkIndex = this.links.length - 1;
                 this.highlightCurrentElement();
-                break;
-            case 'i': // Enter insert mode
-                this.mode = 'insert';
-                this.updateModeIndicator();
-                break;
-            case '/': // Search (placeholder)
-                // TODO: Implement search functionality
                 break;
             case 'escape': // Reset navigation
                 this.currentLinkIndex = -1;

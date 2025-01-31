@@ -13,8 +13,11 @@
       <link>http://localhost:1313/about/</link>
       <pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;
-&lt;p&gt;Welcome to my personal website! I&amp;rsquo;m passionate about technology and sharing knowledge.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Hey! 👋&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m Monty, a software engineer who loves building stuff. These days, I&amp;rsquo;m working on backend systems at Nexl in Sydney. Over the years, I&amp;rsquo;ve worn different hats - from writing code at startups to co-founding a couple of my own ventures.&lt;/p&gt;
+&lt;h2 id=&#34;what-ive-been-up-to&#34;&gt;What I&amp;rsquo;ve Been Up To&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ve had a pretty interesting journey in tech. Here&amp;rsquo;s the quick version:&lt;/p&gt;
+&lt;p&gt;Right now, I&amp;rsquo;m building backend systems at &lt;strong&gt;Nexl&lt;/strong&gt; (2024). Before that, I spent some time at &lt;strong&gt;Sentia&lt;/strong&gt; (2023-2024) working on all sorts of things - payment systems, matching algorithms, you name it. Ruby on Rails was my trusty companion there.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hello World - A Developer&#39;s Journal</title>
