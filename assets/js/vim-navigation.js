@@ -96,20 +96,26 @@ class VimNavigation {
         // Get all block elements in post content
         const postContent = document.querySelector('.post-content');
         if (postContent) {
-            // Get all elements in visual order
             const elements = [];
 
-            // Get block elements first
-            elements.push(...Array.from(postContent.querySelectorAll('p, h1, h2, h3, h4, h5, h6, blockquote, pre')));
-
-            // Get list items, excluding nested ones
-            const listItems = Array.from(postContent.querySelectorAll('li')).filter(li => {
-                const parentList = li.parentElement;
-                const grandparent = parentList.parentElement;
-                return !grandparent || !grandparent.closest('li');
+            // Get all elements in visual order
+            const selector = 'p, h1, h2, h3, h4, h5, h6, blockquote, pre, li';
+            const allElements = Array.from(postContent.querySelectorAll(selector));
+            
+            // Process elements in DOM order (which matches visual order)
+            allElements.forEach(el => {
+                // For list items, only add if it contains direct text content
+                if (el.tagName.toLowerCase() === 'li') {
+                    const hasDirectText = Array.from(el.childNodes).some(node => 
+                        node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0
+                    );
+                    if (hasDirectText) {
+                        elements.push(el);
+                    }
+                } else {
+                    elements.push(el);
+                }
             });
-
-            elements.push(...listItems);
 
             // Filter out empty elements
             this.paragraphs = elements.filter(el => {
