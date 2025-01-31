@@ -1,0 +1,29 @@
+{{- /* This is a modified version of the PaperMod header */ -}}
+<header class="header">
+    {{- if not (.Param "hideHeaderOnSingle") }}
+    <nav class="nav">
+        {{- if not (.Param "disableHeaderTitle") }}
+        {{- if not (eq .Kind "home") }}
+        <div class="logo">
+            <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ .Site.Params.label.text | default .Site.Title }} (Alt + H)">
+                {{- if .Site.Params.label.icon }}
+                <img src="{{- .Site.Params.label.icon -}}" alt="logo" aria-label="logo"
+                    height="{{- .Site.Params.label.iconHeight | default " 30px" -}}">
+                {{- end -}}
+                {{- .Site.Title -}}
+            </a>
+        </div>
+        {{- end }}
+        {{- end }}
+        {{- if .Site.Menus.main }}
+        <ul class="menu" style="display: none;">
+            {{- range .Site.Menus.main }}
+            <li>
+                <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+            </li>
+            {{- end }}
+        </ul>
+        {{- end }}
+    </nav>
+    {{- end }}
+</header>

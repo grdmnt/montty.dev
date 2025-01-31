@@ -1,0 +1,31 @@
+{{- with site.Params.profileMode }}
+<div class="profile">
+    {{- with .imageUrl | default site.Params.label.iconUrl }}
+    <div class="profile_inner">
+        {{- if strings.HasPrefix . "http" }}
+        <img src="{{ . }}" alt="{{ site.Title }}" height="{{ .imageHeight | default 150 }}"
+            width="{{ .imageWidth | default 150 }}" />
+        {{- else }}
+        <img src="{{ . | absURL }}" alt="{{ site.Title }}" height="{{ .imageHeight | default 150 }}"
+            width="{{ .imageWidth | default 150 }}" />
+        {{- end }}
+    </div>
+    {{- end }}
+    <div class="profile_inner">
+        <div class="site-title">
+            <h1>{{ .title | default site.Title }}</h1>
+            <span class="vim-cursor">|</span>
+        </div>
+        {{- with .subtitle }}
+        <span>{{ . }}</span>
+        {{- end }}
+        <div class="buttons">
+            {{- range .buttons }}
+            <a href="{{ trim .url " " }}" class="profile-button">
+                <span>{{ .name }}</span>
+            </a>
+            {{- end }}
+        </div>
+    </div>
+</div>
+{{- end }}

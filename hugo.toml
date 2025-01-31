@@ -1,0 +1,54 @@
+baseURL = "https://montty.dev/"
+title = "montty.dev"
+theme = "PaperMod"
+languageCode = "en-us"
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[minify]
+disableXML = true
+minifyOutput = true
+
+[params]
+env = "production"
+title = "montty.dev"
+description = "Personal Website"
+keywords = ["Blog", "Portfolio", "PaperMod"]
+author = "Me"
+DateFormat = "January 2, 2006"
+defaultTheme = "light"
+disableThemeToggle = true
+ShowReadingTime = true
+ShowShareButtons = false
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowWordCount = true
+ShowRssButtonInSectionTermList = true
+UseHugoToc = true
+
+  [params.profileMode]
+  enabled = true
+  title = ""
+  subtitle = ""
+  imageUrl = ""
+  imageTitle = ""
+
+    [[params.profileMode.buttons]]
+    name = "Home"
+    url = "/"
+
+    [[params.profileMode.buttons]]
+    name = "About"
+    url = "/about/"
+
+    [[params.profileMode.buttons]]
+    name = "Posts"
+    url = "/posts/"
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/grdmnt"
