@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on montty.dev</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://montty.dev/posts/</link>
     <description>Recent content in Posts on montty.dev</description>
     <generator>Hugo -- 0.142.0</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 31 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://montty.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World - A Developer&#39;s Journal</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
+      <link>https://montty.dev/posts/hello-world/</link>
       <pubDate>Fri, 31 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <guid>https://montty.dev/posts/hello-world/</guid>
       <description>&lt;p&gt;Welcome to my corner of the internet. This blog serves as my personal development journal, where I document interesting technical challenges, learnings, and experiences throughout my software engineering career.&lt;/p&gt;
 &lt;h2 id=&#34;what-to-expect&#34;&gt;What to Expect&lt;/h2&gt;
 &lt;p&gt;Don&amp;rsquo;t expect polished tutorials or comprehensive guides. These are primarily my notes and observations - raw, practical, and focused on things I want to remember. I&amp;rsquo;ll be writing about:&lt;/p&gt;

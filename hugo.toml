@@ -52,3 +52,10 @@ UseHugoToc = true
   [[params.socialIcons]]
   name = "github"
   url = "https://github.com/grdmnt"
+
+  [params.opengraph]
+  description = "My corner of the internet where I write about tech, share what I've learned, and document my journey."
+  title = "montty.dev"
+  locale = "en_US"
+  siteName = "montty.dev"
+  type = "website"
