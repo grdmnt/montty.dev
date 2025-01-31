@@ -36,13 +36,18 @@ While Ruby has been my go-to language for years, I'm pushing myself out of that 
 ### Pixel Art
 Recently started pixel art as a creative outlet when I need a break from coding. I'm currently focused on turning anime characters into pixel art - there's something satisfying about capturing their essence in a limited pixel space. Here are some of my attempts:
 
-![Chinatsu Kano](/images/pixel_art/chinatsu.png)
-Chinatsu Kano from Blue Box
-
-![Hina Chono](/images/pixel_art/Hina-small.png)
-Hina Chono from Blue Box
-
-I'll add more as I create them!
+{{< image-gallery >}}
+[
+  {
+    "src": "/images/pixel_art/Hina-small.png",
+    "caption": "Hina Chono from Blue Box"
+  },
+  {
+    "src": "/images/pixel_art/chinatsu.png",
+    "caption": "Chinatsu Kano from Blue Box"
+  }
+]
+{{< /image-gallery >}}
 
 ## About This Site
 This is my little corner of the internet where I jot down interesting tech problems I've solved and things I've learned along the way. Check out my [hello world post](/posts/hello-world) to see what kind of content to expect.

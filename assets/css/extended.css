@@ -349,3 +349,30 @@ code {
 .footer a .nav-cursor {
     display: none;
 }
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.image-gallery figure {
+    flex: 0 1 300px;
+    margin: 0;
+    text-align: center;
+}
+
+.image-gallery img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-gallery figcaption {
+    margin-top: 0.5rem;
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
